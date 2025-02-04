@@ -4,7 +4,7 @@ using UnityEngine.AI;
 public class EnemyAiController : MonoBehaviour
 {
     public Transform player;
-    public float AttackDistance = 5f;
+    public float AttackDistance = 1f;
 
     private NavMeshAgent m_agent;
     private Animator m_animator;
