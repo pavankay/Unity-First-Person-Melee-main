@@ -39,8 +39,8 @@ public class EnemyAiController : MonoBehaviour
     {
         if (m_animator.GetBool("Attack") == false)
         {
-            //m_agent.speed = (m_animator.deltaPosition / Time.deltaTime).magnitude;
-            m_agent.speed = 5f;
+            m_agent.speed = (m_animator.deltaPosition / Time.deltaTime).magnitude;
+            //m_agent.speed = 5f;
         }
     }
 }
