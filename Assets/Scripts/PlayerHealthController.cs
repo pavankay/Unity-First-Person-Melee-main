@@ -1,16 +1,17 @@
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.UI;  // Needed for the Slider
 
 public class PlayerHealthController : MonoBehaviour
 {
-    public int maxHealth = 100;
+    public Slider healthSlider;  // Reference to the UI Slider
+    public int maxHealth = 5;
     private int currentHealth;
 
-    public Slider healthSlider;  // Reference to the health bar UI
-
-    void Awake()
+    void Start()
     {
         currentHealth = maxHealth;
+
+        // Initialize the slider
         if (healthSlider != null)
         {
             healthSlider.maxValue = maxHealth;
@@ -18,10 +19,12 @@ public class PlayerHealthController : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int amount)
+    public void TakeDamage(int damageAmount)
     {
-        currentHealth -= amount;
+        currentHealth -= damageAmount;
+        Debug.Log("Player took damage: " + damageAmount);
 
+        // Update the health slider
         if (healthSlider != null)
         {
             healthSlider.value = currentHealth;
@@ -33,22 +36,9 @@ public class PlayerHealthController : MonoBehaviour
         }
     }
 
-    void Die()
+    private void Die()
     {
-        // Handle player death (disable movement, play animation, etc.)
-        Debug.Log("Player Died");
-        // TEMPORARY: Disable player object
-        gameObject.SetActive(false);
-    }
-
-    public void Heal(int amount)
-    {
-        currentHealth += amount;
-        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-
-        if (healthSlider != null)
-        {
-            healthSlider.value = currentHealth;
-        }
+        Debug.Log("Player has died!");
+        // Add death behavior here (e.g., restart level, disable player, etc.)
     }
 }
