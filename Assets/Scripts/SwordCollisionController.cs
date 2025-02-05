@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SwordCollisionController : MonoBehaviour
 {
-    public int damageAmount = 10;  // Amount of damage the sword deals
+    public int damageAmount = 1;  // Amount of damage the sword deals
 
     private void OnTriggerEnter(Collider other)
     {

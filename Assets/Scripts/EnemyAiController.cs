@@ -5,7 +5,7 @@ public class EnemyAiController : MonoBehaviour
 {
     public Transform player;
     public float AttackDistance = 1f;
-    public float damageDelay = 0.5f;  // Time delay before the damage can be applied
+    public float damageDelay = 0.2f;  // Time delay before the damage can be applied
 
     private NavMeshAgent m_agent;
     private Animator m_animator;
