@@ -4289,7 +4289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1788623315645699378}
   AttackDistance: 1
-  damageDelay: 0.2
+  damageDelay: 0.1
 --- !u!136 &1007452169
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6169,10 +6169,45 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 5163852031345456459, guid: 16c409ddc0fa341068877a5d0f624fc7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 100.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 5163852031345456459, guid: 16c409ddc0fa341068877a5d0f624fc7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 53.49
+      objectReference: {fileID: 0}
     - target: {fileID: 5220452841614113344, guid: 16c409ddc0fa341068877a5d0f624fc7,
         type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5222694420592442604, guid: 16c409ddc0fa341068877a5d0f624fc7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 98.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5222694420592442604, guid: 16c409ddc0fa341068877a5d0f624fc7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 55.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 5222694420592442604, guid: 16c409ddc0fa341068877a5d0f624fc7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9219127
+      objectReference: {fileID: 0}
+    - target: {fileID: 5222694420592442604, guid: 16c409ddc0fa341068877a5d0f624fc7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.3873977
+      objectReference: {fileID: 0}
+    - target: {fileID: 5222694420592442604, guid: 16c409ddc0fa341068877a5d0f624fc7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 45.585
       objectReference: {fileID: 0}
     - target: {fileID: 5958489160822735625, guid: 16c409ddc0fa341068877a5d0f624fc7,
         type: 3}
@@ -7422,12 +7457,12 @@ PrefabInstance:
     - target: {fileID: 8656917290420445785, guid: 16c409ddc0fa341068877a5d0f624fc7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 104.688
+      value: 104.7
       objectReference: {fileID: 0}
     - target: {fileID: 8656917290420445785, guid: 16c409ddc0fa341068877a5d0f624fc7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 21.986
+      value: 22.12
       objectReference: {fileID: 0}
     - target: {fileID: 8656917290420445785, guid: 16c409ddc0fa341068877a5d0f624fc7,
         type: 3}
@@ -9657,9 +9692,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 5
+  m_MaxValue: 100
   m_WholeNumbers: 1
-  m_Value: 5
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -10327,7 +10362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 396e9fcd8eb324bba9f82a7ec0d95756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 1
+  damageAmount: 10
 --- !u!65 &2116362684
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10537,7 +10572,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthSlider: {fileID: 1791603838}
-  maxHealth: 5
+  maxHealth: 100
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
