@@ -28,6 +28,7 @@ public class PlayerHealthController : MonoBehaviour
         if (healthSlider != null)
         {
             healthSlider.value = currentHealth;
+            
         }
 
         if (currentHealth <= 0)

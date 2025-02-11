@@ -11,8 +11,8 @@ public class EnemyAiController : MonoBehaviour
     private Animator m_animator;
     private float m_distanceToPlayer;
 
-    public static bool isAttacking = false;
-    public static bool canDealDamage = false;  // This controls when damage can be applied
+    private bool isAttacking = false;  // Now instance-based
+    private bool canDealDamage = false;  // Now instance-based
 
     private float attackTimer = 0f;
 
@@ -48,6 +48,21 @@ public class EnemyAiController : MonoBehaviour
             m_animator.SetBool("Attack", false);
             m_agent.destination = player.position;
         }
+    }
+
+    public bool CanDealDamage()
+    {
+        return canDealDamage;
+    }
+
+    public bool IsAttacking()
+    {
+        return isAttacking;
+    }
+
+    public void ResetDamage()
+    {
+        canDealDamage = false;
     }
 
     void OnAnimatorMove()

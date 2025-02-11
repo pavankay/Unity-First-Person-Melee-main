@@ -11,12 +11,20 @@ public class SwordCollisionController : MonoBehaviour
             Debug.Log("Sword hit the player!");
 
             PlayerHealthController playerHealth = other.GetComponent<PlayerHealthController>();
+            EnemyAiController enemy = GetComponentInParent<EnemyAiController>(); // Get enemy AI controller from parent object
 
-            // Only deal damage if the enemy is attacking and allowed to deal damage
-            if (playerHealth != null && EnemyAiController.isAttacking && EnemyAiController.canDealDamage)
+            if (playerHealth != null && enemy != null)
             {
-                playerHealth.TakeDamage(damageAmount);  // Apply damage to the player
-                EnemyAiController.canDealDamage = false;  // Prevent multiple hits from one attack
+                Debug.Log("EnemyAiController.isAttacking: " + enemy.IsAttacking());
+                Debug.Log("EnemyAiController.canDealDamage: " + enemy.CanDealDamage());
+
+                // Only deal damage if this specific enemy is attacking and allowed to deal damage
+                if (enemy.IsAttacking() && enemy.CanDealDamage())
+                {
+                    Debug.Log("Dealing damage to the player!");
+                    playerHealth.TakeDamage(damageAmount);  // Apply damage to the player
+                    enemy.ResetDamage();  // Prevent multiple hits from one attack
+                }
             }
         }
     }
