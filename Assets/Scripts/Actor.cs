@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Actor : MonoBehaviour
 {
-    int currentHealth;
+    public int currentHealth;
     public int maxHealth;
 
     void Awake()
@@ -15,7 +15,7 @@ public class Actor : MonoBehaviour
     public void TakeDamage(int amount)
     {
         currentHealth -= amount;
-
+        Debug.Log("Health: " + currentHealth);
         if(currentHealth <= 0)
         { Death(); }
     }
@@ -23,7 +23,9 @@ public class Actor : MonoBehaviour
     void Death()
     {
         // Death function
-        // TEMPORARY: Destroy Object
+        KillCounter.instance.killCount++;
+        KillCounter.instance.UpdateKillCount();
         Destroy(gameObject);
     }
+
 }

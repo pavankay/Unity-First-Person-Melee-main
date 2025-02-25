@@ -193,7 +193,10 @@ public class PlayerController : MonoBehaviour
             HitTarget(hit.point);
 
             if(hit.transform.TryGetComponent<Actor>(out Actor T))
-            { T.TakeDamage(attackDamage); }
+            { 
+                Debug.Log("Damage Dealt");
+                T.TakeDamage(attackDamage); 
+            }
         } 
     }
 

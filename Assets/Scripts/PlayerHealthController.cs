@@ -1,4 +1,6 @@
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;  // Needed for the Slider
 
 public class PlayerHealthController : MonoBehaviour
@@ -39,7 +41,7 @@ public class PlayerHealthController : MonoBehaviour
 
     private void Die()
     {
-        Debug.Log("Player has died!");
+        SceneManager.LoadScene(0);
         // Add death behavior here (e.g., restart level, disable player, etc.)
     }
 }
